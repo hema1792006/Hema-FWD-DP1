@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html><html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="description" content="Portfolio of Hemalakshmi — UI/UX Designer. Case studies, projects, skills, and contact." />
+
+  <title>Hemalakshmi — UI/UX Designer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    :root {
+
+      --bg: #0b0c10;
+
+      --surface: #11131a;
+
+      --text: #e8eaf2;
+
+      --muted: #a6adbb;
+
+      --brand: #7c5cff; /* primary */
+
+      --brand-2: #2dd4bf; /* accent */
+
+      --card: #131621;
+
+      --ring: rgba(124,92,255,0.55);
+
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+
+      --radius: 20px;
+
+    }
+
+    @media (prefers-color-scheme: light) {
+
+      :root {
+
+        --bg: #f7f7fb;
+
+        --surface: #ffffff;
+
+        --text: #0e1320;
+
+        --muted: #5a6072;
+
+        --card: #ffffff;
+
+        --ring: rgba(124,92,255,0.35);
+
+        --shadow: 0 18px 40px rgba(9, 9, 14, .08);
+
+      }
+
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+
+      margin: 0; background: radial-gradient(1200px 800px at 10% -10%, rgba(124,92,255,.15), transparent 60%),
+
+                   radial-gradient(1000px 600px at 110% 0%, rgba(45,212,191,.15), transparent 60%), var(--bg);
+
+      color: var(--text); font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+
+      line-height: 1.6;
+
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    img { max-width: 100%; height: auto; display: block; }
+
+    .container { width: min(1120px, 92vw); margin: 0 auto; }/* Top Nav */
+
+.skip-link { position: absolute; left: -999px; top: auto; width: 1px; height: 1px; overflow: hidden; }
+
+.skip-link:focus { left: 16px; top: 16px; width: auto; height: auto; padding: 10px 14px; background: var(--brand); color: white; border-radius: 12px; }
+
+header {
+
+  position: sticky; top: 0; z-index: 10; backdrop-filter: saturate(1.2) blur(10px);
+
+  background: color-mix(in oklab, var(--surface) 70%, transparent); border-bottom: 1px solid rgba(255,255,255,.06);
+
+}
+
+.nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 0; }
+
+.brand { display: flex; align-items: center; gap: 12px; }
+
+.brand-logo { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, var(--brand), var(--brand-2)); box-shadow: inset 0 0 0 1px rgba(255,255,255,.15); display: grid; place-items: center; font-weight: 800; }
+
+.brand-name { font-weight: 800; letter-spacing: .4px; }
+
+.nav-links { display: flex; gap: 18px; flex-wrap: wrap; align-items: center; }
+
+.nav-links a { opacity: .9; padding: 8px 12px; border-radius: 12px; }
+
+.nav-links a:hover, .nav-links a:focus { background: rgba(124,92,255,.12); outline: none; }
+
+.theme-toggle { border: 1px solid rgba(124,92,255,.3); padding: 8px 12px; border-radius: 12px; cursor: pointer; background: transparent; color: inherit; }
+
+/* Hero */
+
+.hero { padding: 72px 0 36px; }
+
+.hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 28px; align-items: center; }
+
+.badge { display: inline-flex; align-items: center; gap: 10px; padding: 8px 12px; border-radius: 999px; background: rgba(45,212,191,.16); color: #d1fff7; border: 1px solid rgba(45,212,191,.32); font-size: 14px; }
+
+.hero h1 { font-size: clamp(28px, 4.4vw, 56px); line-height: 1.07; margin: 16px 0 10px; font-weight: 800; letter-spacing: -.5px; }
+
+.subtitle { font-size: clamp(16px, 2.2vw, 20px); color: var(--muted); }
+
+.cta-row { display: flex; gap: 12px; margin-top: 22px; flex-wrap: wrap; }
+
+.btn { display: inline-flex; align-items: center; gap: 10px; padding: 12px 16px; border-radius: 14px; border: 1px solid rgba(255,255,255,.08); background: var(--surface); box-shadow: var(--shadow); cursor: pointer; }
+
+.btn.primary { background: linear-gradient(135deg, var(--brand), #9b8dff); color: white; border: none; }
+
+.btn.ghost { background: transparent; border: 1px solid rgba(255,255,255,.14); }
+
+.hero-card { background: var(--card); padding: 18px; border-radius: var(--radius); box-shadow: var(--shadow); border: 1px solid rgba(255,255,255,.06); }
+
+.hero-shot { height: 320px; border-radius: 16px; background: linear-gradient(120deg, rgba(124,92,255,.18), rgba(45,212,191,.18)), repeating-linear-gradient(45deg, rgba(255,255,255,.06) 0 2px, transparent 2px 8px); display: grid; place-items: center; font-weight: 700; letter-spacing: .4px; color: rgba(255,255,255,.86); }
+
+/* Sections */
+
+section { padding: 64px 0; }
+
+.section-head { display: flex; justify-content: space-between; align-items: end; gap: 16px; margin-bottom: 24px; }
+
+.section-head h2 { font-size: clamp(22px, 3vw, 34px); margin: 0; letter-spacing: -.3px; }
+
+.kicker { color: var(--brand-2); font-weight: 700; letter-spacing: .6px; text-transform: uppercase; font-size: 13px; }
+
+.section-desc { color: var(--muted); max-width: 720px; }
+
+/* About */
+
+.about { background: linear-gradient(180deg, transparent, rgba(124,92,255,.06)); border-top: 1px solid rgba(255,255,255,.06); border-bottom: 1px solid rgba(255,255,255,.06); }
+
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+
+.stat { background: var(--card); padding: 16px; border-radius: 16px; border: 1px solid rgba(255,255,255,.06); }
+
+.stat h3 { margin: 0; font-size: 32px; }
+
+.stat p { margin: 6px 0 0; color: var(--muted); }
+
+/* Work */
+
+.filters { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.chip { padding: 8px 12px; border-radius: 999px; border: 1px solid rgba(255,255,255,.14); cursor: pointer; }
+
+.chip.active { background: rgba(124,92,255,.18); border-color: var(--ring); }
+
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+
+.card { background: var(--card); border: 1px solid rgba(255,255,255,.06); border-radius: 18px; overflow: clip; box-shadow: var(--shadow); display: flex; flex-direction: column; }
+
+.thumb { aspect-ratio: 16/10; background: linear-gradient(120deg, rgba(124,92,255,.18), rgba(45,212,191,.18)); display: grid; place-items: center; color: rgba(255,255,255,.9); font-weight: 700; letter-spacing: .4px; }
+
+.card-body { padding: 16px; display: grid; gap: 10px; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.tag { font-size: 12px; border: 1px dashed rgba(255,255,255,.2); padding: 4px 8px; border-radius: 999px; color: var(--muted); }
+
+/* Process */
+
+.process { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+
+.step { background: var(--card); border: 1px solid rgba(255,255,255,.06); border-radius: 18px; padding: 16px; }
+
+.step h3 { margin: 6px 0; }
+
+/* Testimonials */
+
+.testimonials { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+
+.quote { background: var(--card); border: 1px solid rgba(255,255,255,.06); border-radius: 18px; padding: 18px; }
+
+.quote footer { margin-top: 10px; color: var(--muted); }
+
+/* Skills */
+
+.skills { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; }
+
+.skill { background: var(--surface); border: 1px solid rgba(255,255,255,.06); border-radius: 14px; padding: 10px 12px; font-size: 14px; text-align: center; }
+
+/* Contact */
+
+form { display: grid; gap: 12px; }
+
+.field { display: grid; gap: 6px; }
+
+.field label { font-size: 14px; color: var(--muted); }
+
+.field input, .field textarea { padding: 12px 14px; border-radius: 12px; border: 1px solid rgba(255,255,255,.14); background: var(--surface); color: inherit; }
+
+.field input:focus, .field textarea:focus { outline: 2px solid var(--ring); border-color: transparent; }
+
+footer { padding: 40px 0 60px; color: var(--muted); text-align: center; }
+
+/* Reveal animations */
+
+.reveal { opacity: 0; transform: translateY(18px); transition: .6s ease; }
+
+.reveal.show { opacity: 1; transform: none; }
+
+/* Responsive */
+
+@media (max-width: 980px) {
+
+  .hero-grid { grid-template-columns: 1fr; }
+
+  .about-grid { grid-template-columns: 1fr; }
+
+  .grid { grid-template-columns: repeat(2, 1fr); }
+
+  .process { grid-template-columns: repeat(2, 1fr); }
+
+  .testimonials { grid-template-columns: 1fr 1fr; }
+
+  .skills { grid-template-columns: repeat(3, 1fr); }
+
+}
+
+@media (max-width: 600px) {
+
+  .grid { grid-template-columns: 1fr; }
+
+  .process { grid-template-columns: 1fr; }
+
+  .testimonials { grid-template-columns: 1fr; }
+
+  .skills { grid-template-columns: repeat(2, 1fr); }
+
+}
+
+  </style>
+
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header aria-label="Primary">
+
+    <div class="container nav">
+
+      <div class="brand">
+
+        <div class="brand-logo" aria-hidden="true">H</div>
+
+        <div class="brand-name">Hemalakshmi</div>
+
+      </div>
+
+      <nav class="nav-links" aria-label="Main">
+
+        <a href="#work">Work</a>
+
+        <a href="#about">About</a>
+
+        <a href="#process">Process</a>
+
+        <a href="#testimonials">Testimonials</a>
+
+        <a href="#contact">Contact</a>
+
+        <button class="theme-toggle" id="themeToggle" aria-pressed="false" aria-label="Toggle theme">🌙 Theme</button>
+
+      </nav>
+
+    </div>
+
+  </header>  <main id="main">
+
+    <!-- HERO -->
+
+    <section class="hero container reveal" aria-label="Introduction">
+
+      <div class="hero-grid">
+
+        <div>
+
+          <span class="badge" aria-label="Role">UI/UX Designer • Product Thinker</span>
+
+          <h1>Hi, I’m <span style="background: linear-gradient(135deg, var(--brand), var(--brand-2)); -webkit-background-clip: text; background-clip: text; color: transparent;">Hemalakshmi</span>.<br/>I craft intuitive, delightful digital experiences.</h1>
+
+          <p class="subtitle">Specializing in end-to-end product design: research, wireframes, visual design, prototyping, and design systems. I turn complex problems into simple, human‑centered products.</p>
+
+          <div class="cta-row">
+
+            <a class="btn primary" href="#work">View my work →</a>
+
+            <a class="btn ghost" href="#contact">Let’s collaborate</a>
+
+          </div>
+
+        </div>
+
+        <div class="hero-card" aria-hidden="true">
+
+          <div class="hero-shot">Case Study Preview</div>
+
+          <div style="display:grid; gap:10px; margin-top:12px; grid-template-columns: 1fr 1fr;">
+
+            <div class="hero-shot" style="height:140px">Mobile UI</div>
+
+            <div class="hero-shot" style="height:140px">Dashboard</div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- WORK -->
+
+<section id="work" class="container reveal" aria-label="Selected Work">
+
+  <div class="section-head">
+
+    <div>
+
+      <div class="kicker">Selected Work</div>
+
+      <h2>Case Studies & Projects</h2>
+
+    </div>
+
+    <div class="filters" role="tablist" aria-label="Filter projects">
+
+      <button class="chip active" data-filter="all" role="tab" aria-selected="true">All</button>
+
+      <button class="chip" data-filter="app" role="tab">Apps</button>
+
+      <button class="chip" data-filter="web" role="tab">Web</button>
+
+      <button class="chip" data-filter="dashboard" role="tab">Dashboards</button>
+
+      <button class="chip" data-filter="branding" role="tab">Branding</button>
+
+    </div>
+
+  </div>
+
+  <div class="grid" id="projectGrid">
+
+    <!-- Card Template Examples -->
+
+    <article class="card" data-tags="app web" tabindex="0">
+
+      <div class="thumb" aria-hidden="true">FinTech App</div>
+
+      <div class="card-body">
+
+        <h3>PayFlex — Personal Finance App</h3>
+
+        <p class="muted">Onboarding, budgeting flows, and a cross‑platform design system that improved conversion by 21%.</p>
+
+        <div class="tags">
+
+          <span class="tag">Research</span>
+
+          <span class="tag">Wireframes</span>
+
+          <span class="tag">Design System</span>
+
+          <span class="tag">Prototype</span>
+
+        </div>
+
+        <div class="cta-row">
+
+          <a class="btn" href="#" aria-label="Open PayFlex case study">Read case study</a>
+
+          <a class="btn ghost" href="#" aria-label="Open Figma prototype">View prototype</a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+    <article class="card" data-tags="dashboard web">
+
+      <div class="thumb" aria-hidden="true">Analytics</div>
+
+      <div class="card-body">
+
+        <h3>InsightX — Analytics Dashboard</h3>
+
+        <p>Information architecture and data‑viz patterns for a SaaS dashboard with complex permissions.</p>
+
+        <div class="tags">
+
+          <span class="tag">IA</span>
+
+          <span class="tag">Data Viz</span>
+
+          <span class="tag">Accessibility</span>
+
+        </div>
+
+        <div class="cta-row">
+
+          <a class="btn" href="#">Read case study</a>
+
+          <a class="btn ghost" href="#">Design tokens</a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+    <article class="card" data-tags="branding web">
+
+      <div class="thumb" aria-hidden="true">Brand</div>
+
+      <div class="card-body">
+
+        <h3>NovaCare — Health Brand & Site</h3>
+
+        <p>Rebrand and responsive website for a healthcare startup, elevating trust and clarity.</p>
+
+        <div class="tags">
+
+          <span class="tag">Branding</span>
+
+          <span class="tag">Responsive</span>
+
+          <span class="tag">CMS</span>
+
+        </div>
+
+        <div class="cta-row">
+
+          <a class="btn" href="#">Read case study</a>
+
+          <a class="btn ghost" href="#">Live site</a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+    <article class="card" data-tags="app">
+
+      <div class="thumb" aria-hidden="true">Wellness</div>
+
+      <div class="card-body">
+
+        <h3>Bloom — Wellness Habit Tracker</h3>
+
+        <p>Mobile app prototype with gentle nudges and streak mechanics to build healthy routines.</p>
+
+        <div class="tags">
+
+          <span class="tag">UX Writing</span>
+
+          <span class="tag">Motion</span>
+
+          <span class="tag">Usability Tests</span>
+
+        </div>
+
+        <div class="cta-row">
+
+          <a class="btn" href="#">Read case study</a>
+
+          <a class="btn ghost" href="#">Prototype</a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+    <article class="card" data-tags="dashboard app">
+
+      <div class="thumb" aria-hidden="true">EdTech</div>
+
+      <div class="card-body">
+
+        <h3>ClassLoop — Teacher Tools</h3>
+
+        <p>Teacher dashboard, lesson planning, and grading flows designed to reduce admin overhead.</p>
+
+        <div class="tags">
+
+          <span class="tag">User Flows</span>
+
+          <span class="tag">Heuristic Eval</span>
+
+          <span class="tag">Design System</span>
+
+        </div>
+
+        <div class="cta-row">
+
+          <a class="btn" href="#">Read case study</a>
+
+          <a class="btn ghost" href="#">Prototype</a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+    <article class="card" data-tags="web branding">
+
+      <div class="thumb" aria-hidden="true">E‑commerce</div>
+
+      <div class="card-body">
+
+        <h3>Leafy — Sustainable E‑commerce</h3>
+
+        <p>Checkout optimization and micro‑interactions that increased AOV by 13%.</p>
+
+        <div class="tags">
+
+          <span class="tag">Checkout UX</span>
+
+          <span class="tag">A/B Tests</span>
+
+          <span class="tag">Micro‑interactions</span>
+
+        </div>
+
+        <div class="cta-row">
+
+          <a class="btn" href="#">Read case study</a>
+
+          <a class="btn ghost" href="#">Design files</a>
+
+        </div>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about" class="about reveal" aria-label="About Hemalakshmi">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div>
+
+        <div class="kicker">About</div>
+
+        <h2>A designer who sweats the details</h2>
+
+      </div>
+
+      <p class="section-desc">Over 4+ years crafting products across finance, healthcare, and SaaS. I partner with teams to ship lovable, accessible experiences backed by research and measurable outcomes.</p>
+
+    </div>
+
+    <div class="about-grid">
+
+      <div class="stat">
+
+        <h3>20+ launches</h3>
+
+        <p>From MVPs to v2 redesigns across web and mobile.</p>
+
+      </div>
+
+      <div class="stat">
+
+        <h3>8M+ users</h3>
+
+        <p>Products touched by design decisions I led or influenced.</p>
+
+      </div>
+
+      <div class="stat">
+
+        <h3>Design systems</h3>
+
+        <p>Token‑driven, scalable, and accessible components.</p>
+
+      </div>
+
+      <div class="stat">
+
+        <h3>Collaborative</h3>
+
+        <p>Works closely with PMs, engineers, and stakeholders.</p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- PROCESS -->
+
+<section id="process" class="container reveal" aria-label="Design Process">
+
+  <div class="section-head">
+
+    <div>
+
+      <div class="kicker">Process</div>
+
+      <h2>Pragmatic, research‑led, outcome‑driven</h2>
+
+    </div>
+
+  </div>
+
+  <div class="process">
+
+    <div class="step">
+
+      <div class="tag">01</div>
+
+      <h3>Discover</h3>
+
+      <p>Stakeholder interviews, competitive audits, analytics review, and user research to frame the problem.</p>
+
+    </div>
+
+    <div class="step">
+
+      <div class="tag">02</div>
+
+      <h3>Define</h3>
+
+      <p>Personas, journeys, jobs‑to‑be‑done, success metrics, and prioritization.</p>
+
+    </div>
+
+    <div class="step">
+
+      <div class="tag">03</div>
+
+      <h3>Design</h3>
+
+      <p>Flows, wireframes, prototypes, and visual systems with accessibility baked in.</p>
+
+    </div>
+
+    <div class="step">
+
+      <div class="tag">04</div>
+
+      <h3>Deliver</h3>
+
+      <p>Specs, tokens, QA, and tracking for measurable impact. Iterate based on learnings.</p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- TESTIMONIALS -->
+
+<section id="testimonials" class="container reveal" aria-label="Testimonials">
+
+  <div class="section-head">
+
+    <div>
+
+      <div class="kicker">What people say</div>
+
+      <h2>Trusted by teams & founders</h2>
+
+    </div>
+
+  </div>
+
+  <div class="testimonials">
+
+    <blockquote class="quote">
+
+      “Hemalakshmi is rare — she balances craft with speed and brings clarity to fuzzy problems.”
+
+      <footer>— Priya S., Product Manager</footer>
+
+    </blockquote>
+
+    <blockquote class="quote">
+
+      “Her prototypes unlocked stakeholder alignment. Engineering loved the level of detail.”
+
+      <footer>— Arjun K., Engineering Lead</footer>
+
+    </blockquote>
+
+    <blockquote class="quote">
+
+      “User research was thorough and actionable. Our metrics improved within weeks of launch.”
+
+      <footer>— Meera T., Founder</footer>
+
+    </blockquote>
+
+  </div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section class="container reveal" aria-label="Skills">
+
+  <div class="section-head">
+
+    <div>
+
+      <div class="kicker">Skills</div>
+
+      <h2>Tools & superpowers</h2>
+
+    </div>
+
+  </div>
+
+  <div class="skills">
+
+    <div class="skill">Figma</div>
+
+    <div class="skill">Design Systems</div>
+
+    <div class="skill">User Research</div>
+
+    <div class="skill">Prototyping</div>
+
+    <div class="skill">Usability Testing</div>
+
+    <div class="skill">Information Architecture</div>
+
+    <div class="skill">UX Writing</div>
+
+    <div class="skill">Accessibility (WCAG)</div>
+
+    <div class="skill">Motion</div>
+
+    <div class="skill">A/B Testing</div>
+
+    <div class="skill">Product Strategy</div>
+
+    <div class="skill">HTML/CSS</div>
+
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact" class="container reveal" aria-label="Contact">
+
+  <div class="section-head">
+
+    <div>
+
+      <div class="kicker">Contact</div>
+
+      <h2>Let’s build something great</h2>
+
+    </div>
+
+  </div>
+
+  <form id="contactForm" novalidate>
+
+    <div class="field">
+
+      <label for="name">Name</label>
+
+      <input id="name" name="name" placeholder="Your name" required />
+
+    </div>
+
+    <div class="field">
+
+      <label for="email">Email</label>
+
+      <input id="email" name="email" type="email" placeholder="you@example.com" required />
+
+    </div>
+
+    <div class="field">
+
+      <label for="message">Message</label>
+
+      <textarea id="message" name="message" rows="5" placeholder="Tell me about your project" required></textarea>
+
+    </div>
+
+    <button class="btn primary" type="submit">Send message</button>
+
+    <p id="formHelp" class="subtitle" style="margin: 6px 0 0; font-size:14px;">This form opens your email app to send the message.</p>
+
+  </form>
+
+</section>
+
+  </main>  <footer>
+
+    <div class="container">
+
+      <div style="display:flex; justify-content:center; gap:12px; flex-wrap:wrap; margin-bottom:10px;">
+
+        <a href="#" aria-label="Dribbble">Dribbble</a>
+
+        <span>·</span>
+
+        <a href="#" aria-label="Behance">Behance</a>
+
+        <span>·</span>
+
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+
+        <span>·</span>
+
+        <a href="#" aria-label="Email">Email</a>
+
+      </div>
+
+      <div>© <span id="year"></span> Hemalakshmi. All rights reserved.</div>
+
+    </div>
+
+  </footer>  <script>
+
+    // Theme toggle with persistence
+
+    const themeToggle = document.getElementById('themeToggle');
+
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+    const stored = localStorage.getItem('hl-theme');
+
+    function applyTheme(mode){
+
+      document.documentElement.style.colorScheme = mode;
+
+      themeToggle.textContent = mode === 'dark' ? '🌙 Theme' : '☀️ Theme';
+
+      themeToggle.setAttribute('aria-pressed', mode === 'dark');
+
+    }
+
+    function setTheme(mode){ localStorage.setItem('hl-theme', mode); applyTheme(mode); }
+
+    const initial = stored || (prefersDark.matches ? 'dark' : 'light');
+
+    applyTheme(initial);
+
+    themeToggle.addEventListener('click', () => {
+
+      const next = (localStorage.getItem('hl-theme') || initial) === 'dark' ? 'light' : 'dark';
+
+      setTheme(next);
+
+    });
+
+    // Reveal on scroll
+
+    const observer = new IntersectionObserver((entries) => {
+
+      entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('show'); observer.unobserve(e.target);} });
+
+    }, { threshold: .18 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Project filters
+
+    const chips = document.querySelectorAll('.chip');
+
+    const grid = document.getElementById('projectGrid');
+
+    chips.forEach(chip => chip.addEventListener('click', () => {
+
+      chips.forEach(c => { c.classList.remove('active'); c.setAttribute('aria-selected','false'); });
+
+      chip.classList.add('active'); chip.setAttribute('aria-selected','true');
+
+      const f = chip.dataset.filter;
+
+      grid.querySelectorAll('.card').forEach(card => {
+
+        const show = f === 'all' || card.dataset.tags.includes(f);
+
+        card.style.display = show ? 'flex' : 'none';
+
+      });
+
+    }));
+
+    // Contact form: simple validation + mailto
+
+    document.getElementById('contactForm').addEventListener('submit', (e) => {
+
+      e.preventDefault();
+
+      const name = document.getElementById('name');
+
+      const email = document.getElementById('email');
+
+      const message = document.getElementById('message');
+
+      if(!name.value.trim() || !email.validity.valid || !message.value.trim()){
+
+        alert('Please fill in your name, a valid email, and a message.');
+
+        return;
+
+      }
+
+      const subject = encodeURIComponent(`Portfolio Inquiry — ${name.value.trim()}`);
+
+      const body = encodeURIComponent(`${message.value.trim()}\n\n— ${name.value.trim()}\n${email.value.trim()}`);
+
+      window.location.href = `mailto:hello@hemalakshmi.design?subject=${subject}&body=${body}`;
+
+    });
+
+    // Footer year
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+  </script></body>
+
+</html>
+<!-- partial -->
+  
+</body>
+</html>
